@@ -96,9 +96,12 @@ if __name__ == '__main__':
             truncate_count += 1
             if not args.dry_run:
                 log.debug('Truncating file {}'.format(fn))
-                with open(fn, 'ab') as file:
-                    file.seek(start_pos)
-                    file.truncate()
+                try:
+                    with open(fn, 'ab') as file:
+                        file.seek(start_pos)
+                        file.truncate()
+                except PermissionError as e:
+                    log.info(e)
         else:
             log.debug('No tags found in {}'.format(fn))
 
