@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Remove ID3V1 tags')
     parser.add_argument('path', type=str, help='path to file or dir')
-    parser.add_argument('-r', '--recursive', help='find files in sub folder', action="store_true")
+    parser.add_argument('-r', '--recursive', help='find files in sub dirs', action="store_true")
     parser.add_argument('-v', '--verbose', help='output debug information', action="store_true")
     parser.add_argument('-n', '--dry-run', help='perform trial run without modifying files', action="store_true")
     args = parser.parse_args()
