@@ -1,6 +1,7 @@
 # id3v1rm
 Remove ID3v1 tags from mp3 files
 
+```
 usage: __main__.py [-h] [-r] [-v] [-n] path
 
 Remove ID3V1 tags
@@ -13,3 +14,4 @@ optional arguments:
   -r, --recursive  find files in sub dirs
   -v, --verbose    output debug information
   -n, --dry-run    perform trial run without modifying files
+```
