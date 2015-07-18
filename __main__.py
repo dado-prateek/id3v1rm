@@ -96,7 +96,7 @@ if __name__ == '__main__':
             truncate_count += 1
             if not args.dry_run:
                 log.debug('Truncating file {}'.format(fn))
-                with open(fn, 'wb') as file:
+                with open(fn, 'ab') as file:
                     file.seek(start_pos)
                     file.truncate()
         else:
